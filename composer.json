@@ -1,0 +1,33 @@
+{
+    "name": "yourvendor/versioning",
+    "description": "A package for versioning Laravel Eloquent models.",
+    "keywords": ["laravel", "versioning", "eloquent", "models"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Anirban Mukherjee",
+            "email": "anirbanmukherjee602@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "AniV\\Versioning\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=8.0",
+        "illuminate/database": "^11.0",
+        "illuminate/support": "^11.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "YourVendor\\Versioning\\VersioningServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+
+}
