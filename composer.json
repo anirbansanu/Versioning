@@ -1,5 +1,5 @@
 {
-    "name": "yourvendor/versioning",
+    "name": "aniv/versioning",
     "description": "A package for versioning Laravel Eloquent models.",
     "keywords": ["laravel", "versioning", "eloquent", "models"],
     "type": "library",
@@ -23,8 +23,11 @@
     "extra": {
         "laravel": {
             "providers": [
-                "YourVendor\\Versioning\\VersioningServiceProvider"
-            ]
+                "AniV\\Versioning\\VersioningServiceProvider"
+            ],
+            "aliases": {
+                "Versioning": "AniV\\Versioning\\Facades\\Versioning"
+            }
         }
     },
     "minimum-stability": "dev",

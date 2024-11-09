@@ -11,9 +11,11 @@ class VersioningServiceProvider extends ServiceProvider
         // Publish migrations, config files, or anything the package needs
         if ($this->app->runningInConsole()) {
             // Use config path if it exists; otherwise, provide a fallback path
-            $this->publishes([
-                __DIR__ . '/../config/versioning.php' => config_path('versioning.php'),
-            ], 'config');
+            if (function_exists('config_path')) {
+                $this->publishes([
+                    __DIR__ . '/../config/versioning.php' => config_path('versioning.php'),
+                ], 'config');
+            }
         }
     }
 
